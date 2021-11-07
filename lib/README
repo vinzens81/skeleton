@@ -1,0 +1,12 @@
+# Skeleton for ESP
+
+this is a project I use for all my ESP32 projects. It handles all Wifi handling and provides GUI.
+
+When freshly installed on a system use the IP of the ESP and connect vie webbrowser to `/setup` after setting Wifi pass and SSID restart the ESP.
+
+When running you can check on `/status` the actual status of the ESP.
+
+I used VSCode and PLatform IO for programming my project is based on an ESP32
+
+
+Please use as you wish, if you find an issue, please open an issue. No guarantee i will fix it :-)
