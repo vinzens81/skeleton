@@ -57,3 +57,17 @@ bool writeFile(String name, String content)
     return false;
   }
 }
+
+String getListOfAllFiles()
+{
+  String fileListe;
+  File root = SPIFFS.open("/");
+  File file = root.openNextFile();
+  while (file)
+  {
+    fileListe += file.name();
+    fileListe += ";";
+    file = root.openNextFile();
+  }
+  return fileListe;
+}

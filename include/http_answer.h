@@ -94,6 +94,7 @@ void handleNotFound()
 
 void getStatus()
 {
+  String list = getListOfAllFiles();
   String message = "";
   message += "<html><body><h1>Welcom to ESP</h1><br>";
   message += "ESP connected to: ";
@@ -101,15 +102,13 @@ void getStatus()
   message += "<br>";
   message += "Local IP Adress is: ";
   message += localIP;
-  message += "<br>";
-  message += "<br>";
-  message += "<br>";
-  message += "<br>";
-  message += "<br>";
+  message += "<br><br><br><br><br>";
   message += "<br><p style='color:red;'>Danger Area!!</p><br>";
   message += "<form action='/getParams'>Get internal stored variable: <input type='text' name='name'><input type='submit' value='Submit'></form>";
   message += "<form action='/setParams'>Set internal stored variable: <input type='text' name='name'><input type='text' name='content'><input type='submit' value='Submit'></form><br>";
   message += "<form action='/resetWifi'>reset Wifi settings <input type='submit' value='reset'></form>";
+  message += "<br><br><br><br><br>";
+  message += list;
 
   message += "</body></html>";
   server.send(200, "text/html", message);
